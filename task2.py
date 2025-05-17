@@ -60,3 +60,52 @@
 # 5: [5]
 # 6: [6]
 # 7: [7]
+start1 = 1
+end1 = 4
+a1 = [1,2,3,4,5]
+graph1 = {1: [2],
+          2: [3,1],
+          3: [2],
+          4: [5],
+          5: [4],}
+if graph1[start1] == end1:
+    print("YES")
+else:
+    print("NO")
+def f(graph, start, visit=None):
+    if visit is None:
+        visit = []
+    visit.append(start)
+
+    for i in graph[start]:
+        if i not in visit:
+            f(graph, i, visit)
+
+    return visit
+result_1 = f(graph1,start1)
+result_12 = f(graph1,4)
+print(2)
+print("1" , result_1)
+print("2" , result_12)
+start3 =1
+end3 = 2
+graph3 = {1: [1],
+2: [2],
+3: [3],
+4: [4],
+5: [5],
+6: [6],
+7: [7]}
+if graph3[start3] == end3:
+    print("YES")
+else:
+    print("NO")
+s=0
+for i in graph3:
+    if len(graph3[i]) == 1 and :
+        s +=1
+print(s)
+if s ==7:
+    print(graph3)
+
+
